@@ -8,49 +8,48 @@
     <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Inline|Bungee+Shade" rel="stylesheet">
 </head>
 <body>
- <section id="quizinfo">
+    <section id= quizinfo>
     <div id="quiz-time-left"> </div>
-    <div id="question1">
-    <h2> WHAT TYPE OF DOG IS BOWIE? </h2>
-    </div>
-    <div id="answer1">
-        <button class="test" value="ans">Blue Heeler</button>
-        <button class="test" value="inc">Mixed Breed</button>
-        <button class= "test" value="inc">Terrier</button>
-        <button class= "test" value="inc">Australian Shepherd</button>
+   	<form id = "quiz" name = "quiz">
+    <div id="q1">
+    <h2> Q1: WHAT TYPE OF DOG IS BOWIE? </h2>
+        
+        <input type= "radio" id= "mc" name= "question1" value="Blue Heeler">Blue Heeler
+        <input type= "radio" id= "mc" name= "question1" value="Mixed Breed">Mixed Breed
+        <input type= "radio" id= "mc" name= "question1" value="Terrier">Terrier
+        <input type= "radio" id= "mc" name= "question1" value="Australian Shepherd">Australian Shepherd
      </div>
-    <div id="question2">
-    <h2> How Old is Bowie? </h2>
+    <div id="q2">
+    <h2> Q2: How Old is Bowie? </h2>
+        <input type= "radio" id= "mc" name= "question2" value="1 year"> 1 year
+        <input type= "radio" id= "mc" name= "question2" value="2 years"> 2 years
+        <input type= "radio" id= "mc" name= "question2" value="3 years"> 3 years
+        <input type= "radio" id= "mc" name= "question2" value="4 years"> 4 years
     </div>
 
-    <div id="answer2">
-        <button class="test" value="inc">1 year</button>
-        <button class="test" value="ans">2 years</button>
-        <button class="test" value="inc">3 years</button>
-        <button class="test" value="inc">5 years</button>
+    <div id="q3">
+    <h2> Q3: What is Bowie's Favorite Toy? </h2>
+       	<input type= "radio" id= "mc" name= "question3" value="Socks"> Socks
+       	<input type= "radio" id= "mc" name= "question3" value="Tennis Ball"> Tennis Ball
+       	<input type= "radio" id= "mc" name= "question3" value="Bone"> Bone
+        <input type= "radio" id= "mc" name= "question3" value="Rope Toy"> Rope Toy
     </div>
 
-    <div id="question3">
-    <h2> What is Bowie's Favorite Toy? </h2>
+    <div id="q4">
+    <h2> Q4: What is Bowie's Favorite Food? </h2>
+        <input type= "radio" id= "mc" name= "question4" value="Mashed Potatoes"> Mashed Potatoes
+        <input type= "radio" id= "mc" name= "question4" value="Beef"> Beef
+        <input type= "radio" id= "mc" name= "question4" value="Cheese"> Cheese
+        <input type= "radio" id= "mc" name= "question4" value="Any Food"> Any Food
     </div>
+	<br>
+	<br>
+    <input id = "button" type= "button" value="Submit Quiz" onclick="check();">
+    </form>
 
-    <div id="answer3">
-        <button class="test" value="ans">Socks</button>
-        <button class="test" value="inc">Tennis Ball</button>
-        <button class="test" value="inc">Bone</button>
-        <button class="test" value="inc">Rope</button>
-    </div>
-
-    <div id="question4">
-    <h2> What is Bowie's Favorite Food? </h2>
-    </div>
-    
-    <div id="answer4">
-        <button class="test" value="inc">Mashed Potatoes</button>
-        <button class="test" value="inc">Beef</button>
-        <button class="test" value="inc">Cheese</button>
-        <button class="test" value="ans">Any Food</button>
-    </div>
+    <div id = "after_submit">
+    <p id = "number_correct"> You Finished Good Job! </p>
+    </div>   
 
 <script type="text/javascript" src="./javascript/app.js"></script>
 </section>

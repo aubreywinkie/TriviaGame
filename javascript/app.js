@@ -1,9 +1,4 @@
 
-// $("#startButton").click(function() {
-//   $("#splashScreen").hide();
-//   $("gameCanvas").show();
-// });
-
 var totalSeconds = 60*0.5;
 var minutes = parseInt(totalSeconds/60);
 var seconds = parseInt(totalSeconds%60);
@@ -11,7 +6,7 @@ var seconds = parseInt(totalSeconds%60);
 function timer() {
   $("#quiz-time-left").text('Time Left: ' + minutes + ' minutes ' + seconds + ' seconds');
   if(totalSeconds <=0) {
-    setTimeout(function(){ alert("Times Up!"); }, 1);
+    check();
   } else{
     totalSeconds = totalSeconds - 1;
     minutes = parseInt(totalSeconds/60);
@@ -26,18 +21,40 @@ function newWindow()
 }
 
 $("#startButton").click(function() {
-  timer();
   newWindow();
 });
 
+timer();
 
+function check() {
+  var question1 = document.quiz.question1.value;
+  var question2 = document.quiz.question2.value;
+  var question3 = document.quiz.question3.value;
+  var question4 = document.quiz.question4.value;
+  var correct = 0;
 
-  $(".test").on('click', function() {
-    if($(this).val() == 'ans') {
-      alert("Correct Answer!")
-    } else {
-      alert("Wrong Answer")
-      
+    if (question1  == "Blue Heeler") {
+      correct++;
     }
-    });
+
+    if (question2  == "2 years") {
+      correct++;
+    }
+
+    if (question3  == "Socks") {
+      correct++;
+    }
+
+    if (question4  == "Any Food") {
+      correct++;
+    }
+
+
+  document.getElementById("after_submit").style.visibility = "visible";
+  document.getElementById("number_correct").innerHTML = "You got " + correct + " correct.";
+  if (totalSeconds <=0) {
+    document.getElementById("number_correct").innerHTML = "You got " + correct + " correct.";
+  }
+}
+
 
