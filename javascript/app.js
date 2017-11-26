@@ -49,9 +49,23 @@ function check() {
       correct++;
     }
 
-
+  var messages = ["Great Job! You must be a Bowie Super Fan!", "You did so so...you could classify yourself as an acquaintance of Bowie", "Bowie is dissapointed in you"];
+  var pictures = ["images/win.jpg", "images/meh.jpg", "images/lose1.jpg"];
+  var range;
+    if (correct < 2) {
+      range = 2;
+    }
+    if (correct > 0 && correct < 4) {
+      range = 1;
+    }
+    if (correct > 3){
+      range = 0;
+    }
   document.getElementById("after_submit").style.visibility = "visible";
+  document.getElementById("message").innerHTML = messages[range];
   document.getElementById("number_correct").innerHTML = "You got " + correct + " correct.";
+  document.getElementById("picture").src = pictures[range];
+  
   if (totalSeconds <=0) {
     document.getElementById("number_correct").innerHTML = "You got " + correct + " correct.";
   }

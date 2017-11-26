@@ -17,3 +17,8 @@ h1 {
 #after_submit {
 	visibility: hidden;
 }
+
+#picture {
+	height: 500px;
+	width:450px;
+}
