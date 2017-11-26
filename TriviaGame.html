@@ -8,14 +8,17 @@
 </head>
 <body>
 
-	<div id="header">
+	<div id="splashScreen">
 	<h1>Bowie Trivia Game</h1>
-	</div>
-	
 	<div id="bowiepic">
     <img class = "auth-image" src="./images/IMG_0419.jpg" height="400" width="325">
-	</div>
-
+    </div>
+    <input id="startButton" type="button" value="Click Here to Start"/>
+    </div>
+    <canvas id="gameCanvas" style="display:none;">Game Stuff</canvas>
+  
+    <section id="quizinfo">
+    <div id="quiz-time-left"> </div>
     <div id="question1">
     <h2> WHAT TYPE OF DOG IS BOWIE? </h2>
     </div>
@@ -60,6 +63,7 @@
 
 
 </section>
+<form method="post" name="quiz" name="quiz" action="take_test.php" > </form>
 <script type="text/javascript" src="./javascript/app.js"></script>
 </body>
 </html>
