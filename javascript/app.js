@@ -1,8 +1,8 @@
 
-$("#startButton").click(function() {
-  $("#splashScreen").hide();
-  $("gameCanvas").show();
-});
+// $("#startButton").click(function() {
+//   $("#splashScreen").hide();
+//   $("gameCanvas").show();
+// });
 
 var totalSeconds = 60*0.5;
 var minutes = parseInt(totalSeconds/60);
@@ -12,7 +12,6 @@ function timer() {
   $("#quiz-time-left").text('Time Left: ' + minutes + ' minutes ' + seconds + ' seconds');
   if(totalSeconds <=0) {
     setTimeout(function(){ alert("Times Up!"); }, 1);
-    // setTimeout('document.quiz.submit()', 1);
   } else{
     totalSeconds = totalSeconds - 1;
     minutes = parseInt(totalSeconds/60);
@@ -21,11 +20,16 @@ function timer() {
   }
 };
 
+function newWindow() 
+{
+    window.location.href = "Quiz.html";
+}
+
 $("#startButton").click(function() {
   timer();
+  newWindow();
 });
 
-// setTimeout("timer()", 1000);
 
 
   $(".test").on('click', function() {

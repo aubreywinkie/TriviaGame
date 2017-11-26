@@ -1,3 +1,13 @@
 body {
 	text-align: center;
+	background-color: #2ac3de;
+	background-image: url("https://www.transparenttextures.com/patterns/dark-exa.png");
+}
+
+h1 {
+	font-family: 'Bungee Shade', cursive;
+}
+
+#quizinfo {
+	font-family: 'Bungee Inline', cursive;
 }
