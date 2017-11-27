@@ -26,6 +26,7 @@ $("#startButton").click(function() {
 
 timer();
 
+
 function check() {
   var question1 = document.quiz.question1.value;
   var question2 = document.quiz.question2.value;
@@ -55,7 +56,7 @@ function check() {
     if (correct < 2) {
       range = 2;
     }
-    if (correct > 0 && correct < 4) {
+    if (correct > 1 && correct < 4) {
       range = 1;
     }
     if (correct > 3){
@@ -71,4 +72,11 @@ function check() {
   }
 }
 
+// function newWindow2 () {
+//    window.location.href = "score.html";
+// }
+
+// $("#submit").click(function() {
+//   newWindow2();
+// });
 
