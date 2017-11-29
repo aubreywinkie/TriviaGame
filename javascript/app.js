@@ -63,20 +63,18 @@ function check() {
       range = 0;
     }
   document.getElementById("after_submit").style.visibility = "visible";
-  document.getElementById("message").innerHTML = messages[range];
   document.getElementById("number_correct").innerHTML = "You got " + correct + " correct.";
+  document.getElementById("message").innerHTML = messages[range];
   document.getElementById("picture").src = pictures[range];
   
   if (totalSeconds <=0) {
     document.getElementById("number_correct").innerHTML = "You got " + correct + " correct.";
+    $("#questions").hide();
   }
 }
 
-// function newWindow2 () {
-//    window.location.href = "score.html";
-// }
+$("#submit").click(function() {
+  $("#questions").hide();
 
-// $("#submit").click(function() {
-//   newWindow2();
-// });
+});
 
